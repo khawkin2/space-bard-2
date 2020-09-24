@@ -1,0 +1,107 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" />
+
+        <section class="header-details flexrow">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+            </h1>
+
+            {{!-- Character Summary --}}
+            <!--
+            <ul class="summary flexrow">
+                <li>
+                    <input type="text" name="data.background.biography.value" value="{{data.background.biography.value}}" placeholder="Biography" />
+                </li>
+            </ul>
+                -->
+
+
+            {{!-- Header Attributes --}}
+            <ul class="attributes flexrow">
+
+                <li class="attribute health">
+                    <h4 class="attribute-name box-title">Hit Points</h4>
+                    <div class="attribute-value multiple">
+                        <input name="data.core.hp.value" type="text" value="{{data.core.hp.value}}"
+                               data-dtype="Number" placeholder="10" />
+                        <span class="sep"> / </span>
+                        <input name="data.core.hp.max" type="text" value="{{data.core.hp.max}}"
+                               data-dtype="Number" placeholder="10" />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input name="data.core.hp.temp" type="text" class="temphp" placeholder="+Temp"
+                               value="{{data.core.hp.temp}}" data-dtype="{{data.core.hp.type}}" />
+                        <input name="data.core.hp.tempmax" type="text" class="temphp" placeholder="+Max"
+                               value="{{data.core.hp.tempmax}}" data-dtype="{{data.core.hp.type}}" />
+                    </footer>
+                </li>
+
+
+                <li class="attribute">
+                    <h4 class="attribute-name box-title">AC</h4>
+                    <div class="attribute-value">
+                        <input name="data.core.ac.value" type="text" value="{{data.core.ac.value}}"
+                               data-dtype="Number" placeholder="10" />
+                    </div>
+                </li>
+
+                <li class="attribute">
+                    <h4 class="attribute-name box-title">Speed</h4>
+                    <div class="attribute-value">
+                        <input name="data.core.speed.value" type="text"
+                               value="{{data.core.speed.value}}" placeholder="0" />
+                    </div>
+                </li>
+                <!--
+                    <li class="attribute initiative">
+                        <h4 class="attribute-name box-title">{{ localize "sb2.Initiative" }}</h4>
+                <div class="attribute-value">
+                    <span>{{numberFormat data.core.init.total decimals=0 sign=true}}</span>
+                </div>
+                <footer class="attribute-footer">
+                    <span>{{ localize "sb2.Modifier" }}</span>
+                    <input name="data.core.init.value" type="text" placeholder="0" data-dtype="Number"
+                           value="{{numberFormat data.core.init.value decimals=0 sign=true}}" />
+                </footer>
+                </li>-->
+
+            </ul>
+        </section>
+    </header>
+
+    {{!-- NPC Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item active" data-tab="attributes">Attributes{{!--{{ localize "sb2.Attributes" }}</a>
+
+        <!--
+        <a class="item" data-tab="inventory">{{ localize "sb2.Inventory" }}</a>
+        <a class="item" data-tab="features">{{ localize "sb2.Features" }}</a>
+        <a class="item" data-tab="spellbook">{{ localize "sb2.Spellbook" }}</a>
+        <a class="item" data-tab="biography">{{ localize "sb2.Biography" }}</a>
+            -->
+
+    </nav>
+
+    {{!-- NPC Sheet Body --}}
+    <section class="sheet-body">
+
+        <div class="tab attributes flexrow" data-group="primary" data-tab="attributes">
+
+            {{!-- Ability Scores --}}
+            <ul class="ability-scores flexrow">
+                {{#each data.combat_attributes as |attribute id|}}
+                <li class="ability" data-ability="{{id}}">
+                    <h4 class="ability-name box-title rollable">{{combat_attributes.label}}</h4>
+                    <input class="ability-score" name="data.abilities.{{id}}.value" type="text" value="{{combat_attributes.value}}" data-dtype="Number" placeholder="10" />
+                    <div class="ability-modifiers flexrow">
+                        <span class="ability-mod" title="Modifier">{{numberFormat combat_attributes.mod decimals=0 sign=true}}</span>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+</form>

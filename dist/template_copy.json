@@ -1,0 +1,434 @@
+{
+    "Actor": {
+        "types": [ "character", "npc" ],
+        "templates": [
+            {
+                "combat_attributes": {
+                    "melee": {
+                        "value": 10
+                    },
+                    "ranged": {
+                        "value": 10
+                    },
+                    "tech": {
+                        "value": 10
+                    },
+                    "authority": {
+                        "value": 10
+                    },
+                    "weave": {
+                        "value": 10
+                    },
+                    "constitution": {
+                        "value": 10
+                    },
+                    "reflex": {
+                        "value": 10
+                    }
+                },
+                "core": {
+                    "ac": {
+                        "value": 10
+                    },
+                    "hp": {
+                        "value": 10,
+                        "min": 0,
+                        "max": 10,
+                        "temp": 0,
+                        "tempmax": 0
+                    },
+                    "speed": {
+                        "value": 5
+                    },
+                    "shields": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 0
+                    },
+                    "armour": {
+                        "value": 0,
+                        "min": 0,
+                        "max": 0
+                    },
+                    "init": {
+                        "value": 0,
+                        "bonus": 0
+                    }
+                },
+                "skill_attributes": {
+                    "social": {
+                        "value": 0
+                    },
+                    "stealth": {
+                        "value": 0
+                    },
+                    "athletics": {
+                        "value": 0
+                    },
+                    "nature": {
+                        "value": 0
+                    },
+                    "arcane": {
+                        "value": 0
+                    },
+                    "science": {
+                        "value": 0
+                    }
+                },
+                "skills": {
+                    "etiquette": {
+                        "attribute": "social",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "persuasion": {
+                        "attribute": "social",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "intimidation": {
+                        "attribute": "social",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "deception": {
+                        "attribute": "social",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "intuition": {
+                        "attribute": "social",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+
+                    "sneaking": {
+                        "attribute": "stealth",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "disguising": {
+                        "attribute": "stealth",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "thieving": {
+                        "attribute": "stealth",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "lockpicking": {
+                        "attribute": "stealth",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+
+                    "strength": {
+                        "attribute": "athletics",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "distance_running": {
+                        "attribute": "athletics",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "swimming": {
+                        "attribute": "athletics",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "acrobatics": {
+                        "attribute": "athletics",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "climbing": {
+                        "attribute": "athletics",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+
+                    "survival": {
+                        "attribute": "nature",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "tracking": {
+                        "attribute": "nature",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "taming": {
+                        "attribute": "nature",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "perception": {
+                        "attribute": "nature",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+
+                    "alchemy": {
+                        "attribute": "arcane",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "enchanting": {
+                        "attribute": "arcane",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "magic_knowledge": {
+                        "attribute": "arcane",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+
+                    "repair": {
+                        "attribute": "science",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "computer": {
+                        "attribute": "science",
+                        "proficiency": false,
+                        "bonus": 0
+                    },
+                    "medical": {
+                        "attribute": "science",
+                        "proficiency": false,
+                        "bonus": 0
+                    }
+                },
+                "weapon_proficiency": {
+                    "small_arms": {
+                        "value": 0
+                    },
+                    "long_arms": {
+                        "value": 0
+                    },
+                    "throwing_weapons": {
+                        "value": 0
+                    },
+                    "heavy_weapons": {
+                        "value": 0
+                    },
+                    "1h_weapons": {
+                        "value": 0
+                    },
+                    "2h_weapons": {
+                        "value": 0
+                    },
+                    "small_weapons": {
+                        "value": 0
+                    },
+                    "fist_weapons": {
+                        "value": 0
+                    }
+                },
+                "weapon_skills": {
+                    "pistols": {
+                        "attribute": "small_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "automatic_pistols": {
+                        "attribute": "small_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "weave_casters": {
+                        "attribute": "small_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "hand_crossbows": {
+                        "attribute": "small_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+
+                    "rifles": {
+                        "attribute": "long_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "machine_guns": {
+                        "attribute": "long_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "shotguns": {
+                        "attribute": "long_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "bows": {
+                        "attribute": "long_arms",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+
+                    "throwing_knives": {
+                        "attribute": "throwing_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "throwing_stars": {
+                        "attribute": "throwing_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "javelins": {
+                        "attribute": "throwing_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "chakram": {
+                        "attribute": "throwing_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+
+                    "cannons": {
+                        "attribute": "heavy_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "elemental_casters": {
+                        "attribute": "heavy_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "mortars": {
+                        "attribute": "heavy_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "railguns": {
+                        "attribute": "heavy_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+
+                    "swords": {
+                        "attribute": "1h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "axes": {
+                        "attribute": "1h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "maces": {
+                        "attribute": "1h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "shields": {
+                        "attribute": "1h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+
+                    "greatswords": {
+                        "attribute": "2h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "warhammers": {
+                        "attribute": "2h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "polearms": {
+                        "attribute": "2h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "staves": {
+                        "attribute": "2h_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+
+                    "daggers": {
+                        "attribute": "small_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "garrotes": {
+                        "attribute": "small_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "tasers": {
+                        "attribute": "small_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "needles": {
+                        "attribute": "small_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+
+                    "unarmed": {
+                        "attribute": "fist_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "battle_gauntlets": {
+                        "attribute": "fist_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "industro_gloves": {
+                        "attribute": "fist_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    },
+                    "weave_wraps": {
+                        "attribute": "fist_weapons",
+                        "proficiency": 0,
+                        "bonus": 0
+                    }
+                },
+                "notes": {
+                    "value": ""
+                },
+                "background": {
+                    "biography": {
+                        "value": "",
+                        "public": ""
+                    },
+                    "temp_notes": {
+                        "value": ""
+                    }
+
+
+                }
+            }
+        ],
+        "character": {
+            "templates": [ "combat_attributes", "core", "skill_attributes", "skills", "weapon_proficiency", "weapon_skills", "notes", "background" ]
+        }
+
+    },
+
+    "Item": {
+        "types": [ "weapon" ],
+        "templates": [
+            {
+                "description": ""
+            }
+
+        ],
+        "weapon": {
+            "templates": [ "weapon" ]
+        }
+    }
+}
