@@ -13,6 +13,7 @@ export default class ActorSB2 extends Actor {
      * @override
      * TODO: This becomes unnecessary after 0.7.x is released
      */
+    /**
     initialize() {
         console.log("Initializing Actor " + this.name);
         try {
@@ -22,6 +23,7 @@ export default class ActorSB2 extends Actor {
             console.error(err);
         }
     }
+     */
 
     /* -------------------------------------------- */
 
@@ -29,7 +31,9 @@ export default class ActorSB2 extends Actor {
      * @override
      * TODO: This becomes unnecessary after 0.7.x is released
      */
+    /**
     prepareData() {
+        super.prepareData();
 
         console.log("_data");
         console.log(this._data);
@@ -47,6 +51,7 @@ export default class ActorSB2 extends Actor {
         if (is07x) this.applyActiveEffects();
         this.prepareDerivedData();
     }
+     */
 
     /* -------------------------------------------- */
 
@@ -243,5 +248,23 @@ export default class ActorSB2 extends Actor {
         */
     }
 
+    /* -------------------------------------------- */
+    /*  Socket Listeners and Handlers
+    /* -------------------------------------------- */
+
+    /** @override */
+    static async create(data, options = {}) {
+        data.token = data.token || {};
+        if (data.type === "character") {
+            mergeObject(data.token, {
+                vision: true,
+                dimSight: 30,
+                brightSight: 0,
+                actorLink: true,
+                disposition: 1
+            }, { overwrite: false });
+        }
+        return super.create(data, options);
+    }
 
 }

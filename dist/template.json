@@ -434,7 +434,7 @@
 
         ],
         "weapon": {
-            "templates": [ "weapon" ]
+            "templates": [ "description" ]
         }
     }
 }
