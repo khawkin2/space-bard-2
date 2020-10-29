@@ -56,13 +56,13 @@ export default class ActorSheetSB2 extends ActorSheet {
         data.filters = this._filters;
 
         // Ability Scores
-        /*
-        for (let [a, abl] of Object.entries(data.actor.data.abilities)) {
-            abl.icon = this._getProficiencyIcon(abl.proficient);
-            abl.hover = CONFIG.DND5E.proficiencyLevels[abl.proficient];
-            abl.label = CONFIG.DND5E.abilities[a];
+        for (let [a, abl] of Object.entries(data.actor.data.combat_attributes)) {
+            //abl.icon = this._getProficiencyIcon(abl.proficient);
+            //abl.hover = CONFIG.SB2.proficiencyLevels[abl.proficient];
+            abl.label = CONFIG.SB2.abilities[a];
         }
 
+        /*
         // Skills
         if (data.actor.data.skills) {
             for (let [s, skl] of Object.entries(data.actor.data.skills)) {

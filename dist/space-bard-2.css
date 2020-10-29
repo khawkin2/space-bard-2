@@ -641,7 +641,7 @@
 
     .space-bard-2.sheet.actor .ability-scores {
         flex: 0 0 100px;
-        height: 440px;
+        height: 500px;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -663,17 +663,9 @@
                 margin-bottom: -3px;
             }
 
-            .space-bard-2.sheet.actor .ability-scores .ability input.ability-score {
-                height: 30px;
-                width: 36px;
-                margin: 0 auto;
-                line-height: 32px;
-                font-size: 24px;
-            }
-
             .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers {
-                height: 24px;
-                margin: -8px 0 0;
+                height: 40px;
+                margin: 0 0 0;
             }
 
                 .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers span.ability-mod,
@@ -682,19 +674,14 @@
                     height: 22px;
                     line-height: 22px;
                     font-size: 16px;
-                    border-top: 2px groove #eeede0;
                 }
 
-                .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers span.ability-mod {
-                    border-right: 2px groove #eeede0;
-                }
-
-                .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers .ability-proficiency {
-                    line-height: 30px;
-                }
-
-                .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers span.ability-save {
-                    border-left: 2px groove #eeede0;
+                .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers input.ability-score {
+                    height: 30px;
+                    width: 36px;
+                    margin: 0 auto;
+                    line-height: 32px;
+                    font-size: 24px;
                 }
 
     .space-bard-2.sheet.actor .proficiency-toggle {

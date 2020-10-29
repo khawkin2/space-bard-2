@@ -94,10 +94,10 @@
             <ul class="ability-scores flexrow">
                 {{#each data.combat_attributes as |attribute id|}}
                 <li class="ability" data-ability="{{id}}">
-                    <h4 class="ability-name box-title rollable">{{combat_attributes.label}}</h4>
-                    <input class="ability-score" name="data.abilities.{{id}}.value" type="text" value="{{combat_attributes.value}}" data-dtype="Number" placeholder="10" />
+                    <h4 class="ability-name box-title rollable">{{id}}</h4>
                     <div class="ability-modifiers flexrow">
-                        <span class="ability-mod" title="Modifier">{{numberFormat combat_attributes.mod decimals=0 sign=true}}</span>
+                        <span class="ability-mod" title="Modifier">{{numberFormat attribute.mod decimals=0 sign=true}}</span>
+                        <input class="ability-score" name="data.abilities.{{id}}.value" type="text" value="{{attribute.value}}" data-dtype="Number" placeholder="10" />
                     </div>
                 </li>
                 {{/each}}

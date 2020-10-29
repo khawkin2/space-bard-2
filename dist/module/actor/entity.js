@@ -13,7 +13,6 @@ export default class ActorSB2 extends Actor {
      * @override
      * TODO: This becomes unnecessary after 0.7.x is released
      */
-    /**
     initialize() {
         console.log("Initializing Actor " + this.name);
         try {
@@ -23,7 +22,6 @@ export default class ActorSB2 extends Actor {
             console.error(err);
         }
     }
-     */
 
     /* -------------------------------------------- */
 
@@ -31,7 +29,6 @@ export default class ActorSB2 extends Actor {
      * @override
      * TODO: This becomes unnecessary after 0.7.x is released
      */
-    /**
     prepareData() {
         super.prepareData();
 
@@ -51,8 +48,6 @@ export default class ActorSB2 extends Actor {
         if (is07x) this.applyActiveEffects();
         this.prepareDerivedData();
     }
-     */
-
     /* -------------------------------------------- */
 
     /**
@@ -159,7 +154,7 @@ export default class ActorSB2 extends Actor {
 
         // Ability modifiers and saves
         const checkBonus = Number.isNumeric(bonuses.check) ? parseInt(bonuses.check) : 0;
-        for (let [id, abl] of Object.entries(data.abilities)) {
+        for (let [id, abl] of Object.entries(data.combat_attributes)) {
             abl.mod = Math.floor((abl.value - 10) / 2);
             //abl.prof = (abl.proficient || 0) * data.attributes.prof;
             //abl.saveBonus = saveBonus;
