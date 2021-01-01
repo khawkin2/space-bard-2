@@ -17,8 +17,6 @@
                 </li>
             </ul>
                 -->
-
-
             {{!-- Header Attributes --}}
             <ul class="attributes flexrow">
 
@@ -38,7 +36,6 @@
                                value="{{data.core.hp.tempmax}}" data-dtype="{{data.core.hp.type}}" />
                     </footer>
                 </li>
-
 
                 <li class="attribute">
                     <h4 class="attribute-name box-title">AC</h4>
@@ -97,7 +94,7 @@
                     <h4 class="ability-name box-title rollable">{{id}}</h4>
                     <div class="ability-modifiers flexrow">
                         <span class="ability-mod" title="Modifier">{{numberFormat attribute.mod decimals=0 sign=true}}</span>
-                        <input class="ability-score" name="data.abilities.{{id}}.value" type="text" value="{{attribute.value}}" data-dtype="Number" placeholder="10" />
+                        <input class="ability-score" name="data.combat_attributes.{{id}}.value" type="text" value="{{attribute.value}}" data-dtype="Number" placeholder="10" />
                     </div>
                 </li>
                 {{/each}}

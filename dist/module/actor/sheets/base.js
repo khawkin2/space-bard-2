@@ -59,7 +59,7 @@ export default class ActorSheetSB2 extends ActorSheet {
         for (let [a, abl] of Object.entries(data.actor.data.combat_attributes)) {
             //abl.icon = this._getProficiencyIcon(abl.proficient);
             //abl.hover = CONFIG.SB2.proficiencyLevels[abl.proficient];
-            abl.label = CONFIG.SB2.abilities[a];
+            abl.label = CONFIG.SB2.combat_attributes[a];
         }
 
         /*
