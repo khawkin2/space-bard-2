@@ -21,17 +21,40 @@
     src: url('./fonts/divlit.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Mandalore';
+    font-style: normal;
+    src: url('./fonts/mandalore.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mandalore Title';
+    font-style: normal;
+    src: url('./fonts/mandaloretitle.ttf') format('truetype');
+}
+
 .neuropolitical {
     font-family: "Neuro Political", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.divlit {
+    font-family: "Divlit", sans-serif;
     font-size: 20px;
     font-weight: 700;
 }
 
-.divlit
-{
-    font-family: "Divlit", sans-serif;
+.mandalore {
+    font-family: "Mandalore", sans-serif;
     font-size: 20px;
-    font-weight: 700;
+    font-style: normal;
+}
+
+.mandaloretitle {
+    font-family: "Mandalore Title", sans-serif;
+    font-size: 20px;
+    font-style: normal;
 }
 /* ----------------------------------------- */
 /*  Sheet Styles                             */
@@ -221,7 +244,7 @@
         padding: 2px 0;
         border-top: 2px groove #eeede0;
         border-bottom: 2px groove #eeede0;
-        font-family: "Divlit",  sans-serif;
+        font-family: "Divlit", sans-serif;
         font-size: 20px;
         font-weight: 700;
     }
@@ -324,15 +347,16 @@
             }
 
         .space-bard-2.sheet .sheet-header {
-            flex: 0 0 100px;
-            border-bottom: 2px groove #eeede0;
+            flex: 100px 0 0;
+            border-right: 2px groove #eeede0;
+            width: 150px;
             /* Character Name */
             /* Profile Image */
             /* Header Summary Details */
         }
 
             .space-bard-2.sheet .sheet-header .header-details {
-                font-family: "Divlit", sans-serif;
+                font-family: "Mandalore", sans-serif;
                 font-size: 20px;
                 font-weight: 700;
             }
@@ -348,7 +372,7 @@
                 .space-bard-2.sheet .sheet-header h1 input {
                     display: block;
                     height: 50px;
-                    font-size: 32px;
+                    font-size: 24px;
                     margin: 0;
                 }
 
@@ -358,17 +382,7 @@
                 height: 100px;
                 object-fit: contain;
                 border: none;
-                border-right: 2px groove #eeede0;
-            }
-
-            .space-bard-2.sheet .sheet-header .summary {
-                flex: 0 0 100%;
-                height: 40px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                border-top: 2px groove #eeede0;
-                border-bottom: none;
+                border-bottom: 2px groove #eeede0;
             }
 
                 .space-bard-2.sheet .sheet-header .summary li {
@@ -376,14 +390,10 @@
                     float: left;
                     margin: 2px 0;
                     padding: 0;
-                    border-right: 2px groove #eeede0;
+                    border-bottom: 2px groove #eeede0;
                     line-height: 34px;
                     color: #4b4a44;
                 }
-
-                    .space-bard-2.sheet .sheet-header .summary li:last-child {
-                        border-right: none;
-                    }
 
         .space-bard-2.sheet .sheet-navigation {
             flex: 0 0 30px;
@@ -528,27 +538,6 @@
             margin: 10px 0;
         }
 
-    .space-bard-2.sheet.actor .sheet-header .header-exp {
-        flex: 0 0 150px;
-        margin-right: 3px;
-        height: 60px;
-        justify-content: flex-end;
-        text-align: right;
-    }
-
-    .space-bard-2.sheet.actor .sheet-header .summary {
-        height: 30px;
-        border-bottom: 2px groove #eeede0;
-        font-size: 18px;
-    }
-
-        .space-bard-2.sheet.actor .sheet-header .summary input,
-        .space-bard-2.sheet.actor .sheet-header .summary span {
-            display: block;
-            height: 24px;
-            line-height: 24px;
-        }
-
     .space-bard-2.sheet.actor .sheet-header .attributes {
         flex: 0 0 100%;
         margin: 0;
@@ -558,7 +547,7 @@
             height: 70px;
             margin: 0;
             border: none;
-            border-right: 2px groove #eeede0;
+            border-bottom: 2px groove #eeede0;
             border-radius: 0;
         }
 
@@ -566,9 +555,16 @@
                 border-right: none;
             }
 
+            .space-bard-2.sheet.actor .sheet-header .attributes .attribute .attribute-name {
+                font-size: 20px;
+                height: 24px;
+                line-height: 24px;
+            }
+
             .space-bard-2.sheet.actor .sheet-header .attributes .attribute .attribute-value {
-                height: 30px;
-                line-height: 30px;
+                font-size: 16px;
+                height: 24px;
+                line-height: 24px;
             }
 
     .space-bard-2.sheet.actor .attributes input.temphp {
@@ -617,13 +613,13 @@
                 height: 28px;
                 line-height: 28px;
                 font-family: "Neuro Political", sans-serif;
-                font-size: 20px;
-                font-weight: 700;
+                font-size: 16px;
+                font-weight: 500;
             }
 
                 .space-bard-2.sheet.actor ul.attributes li.attribute .attribute-value > * {
                     font-weight: 400;
-                    font-size: 24px;
+                    font-size: 16px;
                 }
 
                 .space-bard-2.sheet.actor ul.attributes li.attribute .attribute-value.multiple input {
@@ -639,50 +635,52 @@
                 font-weight: 400;
             }
 
-    .space-bard-2.sheet.actor .ability-scores {
-        flex: 0 0 100px;
-        height: 500px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        font-family: "Neuro Political", sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        border: 2px groove #eeede0;
-        border-radius: 3px;
+    .space-bard-2.sheet.actor table.ability-table {
+        table-layout: fixed;
+        overflow: hidden;
     }
 
-        .space-bard-2.sheet.actor .ability-scores .ability {
-            height: 70px;
-            text-align: center;
-            border-bottom: 2px groove #eeede0;
+        .space-bard-2.sheet.actor table.ability-table .head {
+            font-family: "Mandalore Title", sans-serif;
+            text-shadow: none;
+            font-size: 20px;
+            width: fit-content;
+            padding: 0.25em 0.25em;
         }
 
-            .space-bard-2.sheet.actor .ability-scores .ability:last-child {
-                border-bottom: none;
-                margin-bottom: -3px;
+            .space-bard-2.sheet.actor table.ability-table .head .attribute-name-head {
+                width: 30%;
+                min-width: 200px;
             }
 
-            .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers {
-                height: 40px;
-                margin: 0 0 0;
+            .space-bard-2.sheet.actor table.ability-table .head .num-head {
+                width: 10%;
+                min-width: 50px;
             }
 
-                .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers span.ability-mod,
-                .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers span.ability-save {
-                    flex: 0 0 24px;
-                    height: 22px;
-                    line-height: 22px;
-                    font-size: 16px;
-                }
+        .space-bard-2.sheet.actor table.ability-table .body {
+            font-family: "Neuro Political", sans-serif;
+            text-shadow: none;
+            font-weight: normal;
+            font-size: 16px;
+            padding: 0px;
 
-                .space-bard-2.sheet.actor .ability-scores .ability .ability-modifiers input.ability-score {
-                    height: 30px;
-                    width: 36px;
-                    margin: 0 auto;
-                    line-height: 32px;
-                    font-size: 24px;
-                }
+        }
+
+            .space-bard-2.sheet.actor table.ability-table .body .row {
+                height: 20px;
+            }
+
+            .space-bard-2.sheet.actor table.ability-table .body .row .num {
+                width: 50px;
+                align-content: center;
+            }
+
+            .space-bard-2.sheet.actor table.ability-table .body .row .ability-score {
+                height: 20px;
+                width: 50px;
+                font-size: 14px;
+            }
 
     .space-bard-2.sheet.actor .proficiency-toggle {
         color: #b5b3a4;
@@ -954,7 +952,7 @@
             .space-bard-2.sheet.actor .inventory-list .inventory-header h3 {
                 margin: 0 -5px 0 0;
                 padding-left: 5px;
-                font-family: "Divlit", sans-serif;
+                font-family: "Mandalore", sans-serif;
                 font-size: 20px;
                 font-weight: 700;
                 font-size: 16px;
@@ -1215,10 +1213,10 @@
 
     .space-bard-2.sheet.item .sheet-header .item-subtitle {
         flex: 0 0 80px;
-        height: 60px;
+        width: 60px;
         margin: 0;
         padding: 5px;
-        text-align: right;
+        text-align: left;
         color: #7a7971;
     }
 
@@ -1582,10 +1580,6 @@
         background: rgba(0, 0, 0, 0.05);
         padding: 0 3px;
         margin: 0 3px;
-    }
-
-    .space-bard-2.sheet.actor.character .sheet-header .attributes .hit-dice {
-        font-size: 24px;
     }
 
     .space-bard-2.sheet.actor.character .sheet-header .attributes .initiative .attribute-footer input {

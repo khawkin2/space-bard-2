@@ -5,25 +5,46 @@
             "stats": {
                 "combat_attributes": {
                     "melee": {
-                        "value": 10
+                        "value": 10,
+                        "raw": 10,
+                        "damage": 0,
+                        "buffs": 0
                     },
                     "ranged": {
-                        "value": 10
+                        "value": 10,
+                        "raw": 10,
+                        "damage": 0,
+                        "buffs": 0
                     },
                     "tech": {
-                        "value": 10
+                        "value": 10,
+                        "raw": 10,
+                        "damage": 0,
+                        "buffs": 0
                     },
                     "authority": {
-                        "value": 10
+                        "value": 10,
+                        "raw": 10,
+                        "damage": 0,
+                        "buffs": 0
                     },
                     "weave": {
-                        "value": 10
+                        "value": 10,
+                        "raw": 10,
+                        "damage": 0,
+                        "buffs": 0
                     },
                     "constitution": {
-                        "value": 10
+                        "value": 10,
+                        "raw": 10,
+                        "damage": 0,
+                        "buffs": 0
                     },
                     "reflex": {
-                        "value": 10
+                        "value": 10,
+                        "raw": 10,
+                        "damage": 0,
+                        "buffs": 0
                     }
                 },
 

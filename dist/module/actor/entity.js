@@ -70,6 +70,7 @@ export default class ActorSB2 extends Actor {
 
         // Compute initial ability score modifiers in base data since these may be referenced
         for (let abl of Object.values(this.data.data.combat_attributes)) {
+            abl.value = abl.raw + abl.buffs + abl.damage;
             abl.mod = Math.floor((abl.value - 10) / 2);
         }
 
