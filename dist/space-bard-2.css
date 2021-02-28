@@ -357,7 +357,7 @@
 
             .space-bard-2.sheet .sheet-header .header-details {
                 font-family: "Mandalore", sans-serif;
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 700;
             }
 
@@ -372,7 +372,7 @@
                 .space-bard-2.sheet .sheet-header h1 input {
                     display: block;
                     height: 50px;
-                    font-size: 24px;
+                    font-size: 20px;
                     margin: 0;
                 }
 
@@ -408,6 +408,7 @@
                 line-height: 32px;
                 margin: 0 24px;
                 border-bottom: 3px solid #b5b3a4;
+                font-size: 14px;
             }
 
                 .space-bard-2.sheet .sheet-navigation .item.active {
@@ -555,16 +556,26 @@
                 border-right: none;
             }
 
+            .space-bard-2.sheet.actor .sheet-header .attributes .attribute .attribute-row {
+                justify-content: space-between;
+            }
+
             .space-bard-2.sheet.actor .sheet-header .attributes .attribute .attribute-name {
                 font-size: 20px;
                 height: 24px;
                 line-height: 24px;
+                text-align: left;
+                white-space: nowrap;
+                flex: 1 3 0;
             }
 
             .space-bard-2.sheet.actor .sheet-header .attributes .attribute .attribute-value {
-                font-size: 16px;
+                font-size: 12px;
+                min-width: 60px;
                 height: 24px;
                 line-height: 24px;
+                flex: 6 0 0;
+                text-align: right;
             }
 
     .space-bard-2.sheet.actor .attributes input.temphp {
@@ -623,7 +634,7 @@
                 }
 
                 .space-bard-2.sheet.actor ul.attributes li.attribute .attribute-value.multiple input {
-                    flex: 0 0 33%;
+                    flex-grow: 6;
                 }
 
             .space-bard-2.sheet.actor ul.attributes li.attribute .attribute-footer {
@@ -1236,10 +1247,11 @@
     }
 
         .space-bard-2.sheet.item .sheet-navigation .item {
-            font-size: 18px;
+            font-size: 14px;
         }
 
     .space-bard-2.sheet.item .sheet-body {
+        height: 100%;
         overflow: hidden;
     }
 
@@ -1542,37 +1554,6 @@
         color: #7a7971;
         white-space: nowrap;
     }
-
-    .space-bard-2.sheet.actor.character .sheet-header .experience {
-        flex: 0 0 32px;
-        margin-bottom: -5px;
-        align-items: center;
-        font-size: 18px;
-    }
-
-        .space-bard-2.sheet.actor.character .sheet-header .experience span.max {
-            color: #7a7971;
-            flex: none;
-            margin-left: 3px;
-        }
-
-    .space-bard-2.sheet.actor.character .sheet-header .xpbar {
-        flex: 0 0 8px;
-        width: 100%;
-        margin-bottom: 5px;
-        background: #7a7971;
-        border: 1px solid #000;
-        border-radius: 3px;
-    }
-
-        .space-bard-2.sheet.actor.character .sheet-header .xpbar .bar {
-            height: 4px;
-            margin: 1px;
-            display: block;
-            background: #afebff;
-            border: 1px solid #000;
-            border-radius: 2px;
-        }
 
     .space-bard-2.sheet.actor.character .sheet-header .attributes a.rest {
         border: 1px solid #b5b3a4;

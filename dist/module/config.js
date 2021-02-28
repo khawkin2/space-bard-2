@@ -17,14 +17,21 @@ export const SB2 = {};
 // * @type {Object}
 // */
 SB2.combat_attributes = {
-    "melee": "SB2.AbilityStr",
-    "ranged": "SB2.AbilityDex",
-    "tech": "SB2.AbilityCon",
-    "authoriy": "SB2.AbilityInt",
-    "weave": "SB2.AbilityWis",
-    "constitution": "SB2.AbilityCha",
-    "reflex": "SB2.AbilityCha"
+    "melee": "SB2.Attribute_Melee",
+    "ranged": "SB2.Attribute_Ranged",
+    "tech": "SB2.Attribute_Tech",
+    "authoriy": "SB2.Attribute_Auth",
+    "weave": "SB2.Attribute_Weave",
+    "constitution": "SB2.Attribute_Con",
+    "reflex": "SB2.Attribute_Ref"
 };
+
+SB2.damage_types = [
+    "physical",
+    "magical",
+    "psychic",
+    "true"
+]
 
 ///* -------------------------------------------- */
 

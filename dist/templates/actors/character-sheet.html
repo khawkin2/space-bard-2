@@ -1,124 +1,35 @@
-<form class="{{cssClass}} flexrow" autocomplete="off">
+<form class="{{cssClass}} flexrow" style="flex-wrap: nowrap" autocomplete="off">
 
     {{!-- Sheet Header --}}
-    <section class="sheet-header flexcol">
-        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" />
+    {{> "systems/space-bard-2/templates/actors/parts/actor-header.html"}}
 
-        <section class="header-details flexcol">
-            <h1 class="charname">
-                <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
-            </h1>
-
-            {{!-- Header Attributes --}}
-            <ul class="attributes flexcol">
-
-                <li class="attribute health">
-                    <h4 class="attribute-name box-title">Hit Points</h4>
-                    <div class="attribute-value multiple">
-                        <input name="data.core.hp.value" type="text" value="{{data.core.hp.value}}"
-                               data-dtype="Number" placeholder="10" />
-                        <span class="sep"> / </span>
-                        <input name="data.core.hp.max" type="text" value="{{data.core.hp.max}}"
-                               data-dtype="Number" placeholder="10" />
-                    </div>
-                    <h4 class="attribute-name box-title">AC</h4>
-                    <div class="attribute-value">
-                        <input name="data.core.ac.value" type="text" value="{{data.core.ac.value}}"
-                               data-dtype="Number" placeholder="10" />
-                    </div>
-                </li>
-
-                <li class="attribute">
-                    <h4 class="attribute-name box-title">Speed</h4>
-                    <div class="attribute-value">
-                        <input name="data.core.speed.value" type="text"
-                               value="{{data.core.speed.value}}" placeholder="0" />
-                    </div>
-                </li>
-                <!--
-                    <li class="attribute initiative">
-                        <h4 class="attribute-name box-title">{{ localize "sb2.Initiative" }}</h4>
-                <div class="attribute-value">
-                    <span>{{numberFormat data.core.init.total decimals=0 sign=true}}</span>
-                </div>
-                <footer class="attribute-footer">
-                    <span>{{ localize "sb2.Modifier" }}</span>
-                    <input name="data.core.init.value" type="text" placeholder="0" data-dtype="Number"
-                           value="{{numberFormat data.core.init.value decimals=0 sign=true}}" />
-                </footer>
-                </li>-->
-
-            </ul>
-        </section>
-    </section>
-
-    <section class="flexcol">
+    <section class="flexcol" style="height: 100%; overflow: auto">
 
         {{!-- NPC Sheet Navigation --}}
         <nav class="sheet-navigation tabs" data-group="primary">
             <a class="item active" data-tab="attributes">Attributes</a>
-
-            <!--
-        <a class="item" data-tab="inventory">{{ localize "sb2.Inventory" }}</a>
-        <a class="item" data-tab="features">{{ localize "sb2.Features" }}</a>
-        <a class="item" data-tab="spellbook">{{ localize "sb2.Spellbook" }}</a>
-        <a class="item" data-tab="biography">{{ localize "sb2.Biography" }}</a>
-            -->
-
+            <a class="item" data-tab="skills">Skills</a>
+            <a class="item" data-tab="biography">Biography</a>
+            <a class="item" data-tab="misc">Misc</a>
         </nav>
 
         {{!-- NPC Sheet Body --}}
         <section class="sheet-body">
 
-            {{!--<div class="tab attributes flexrow" data-group="primary" data-tab="attributes"> --}}
-            <table class="ability-table table">
-                <thead class="head">
-                    <tr>
-                        <th class="attribute-name-head">Ability</th>
-                        <th>Total</th>
-                        <th>Mod</th>
-                        <th class="num-head">Raw</th>
-                        <th class="num-head">Buff</th>
-                        <th class="num-head">Dmg</th>
-                    </tr>
-                </thead>
-
-                <tbody class="body">
-                    {{#each data.combat_attributes as |attribute id|}}
-                    <tr class="row">
-                        <td>
-                            <a class="ability-name">{{id}}</a>
-                        </td>
-
-                        {{!-- Total --}}
-                        <td class="num">
-                            <span name="data.combat_attributes.{{id}}.value" data-dtype="Number">{{attribute.value}}</span>
-                        </td>
-
-                        {{!-- Modifier --}}
-                        <td class="num">{{numberFormat attribute.mod decimals=0 sign=true}}</td>
-
-                        {{!-- Raw --}}
-                        <td class="num">
-                            <input class="ability-score" name="data.combat_attributes.{{id}}.raw" type="text" value="{{attribute.raw}}" data-dtype="Number" placeholder="10" />
-                        </td>
-
-                        {{!-- Buff --}}
-                        <td class="num">
-                            <input class="ability-score" name="data.combat_attributes.{{id}}.buffs" type="text" value="{{attribute.buffs}}" data-dtype="Number" placeholder="0" />
-                        </td>
-
-                        {{!-- Damage --}}
-                        <td class="num">
-                            <input class="ability-score" name="data.combat_attributes.{{id}}.damage" type="text" value="{{attribute.damage}}" data-dtype="Number" placeholder="0" />
-                        </td>
+            <div class="tab attributes flexcol" data-group="primary" data-tab="attributes">
+                {{> "systems/space-bard-2/templates/actors/parts/actor-attributes.html"}}
+            </div>
+            <div class="tab skills flexcol" data-group="primary" data-tab="skills">
+                {{> "systems/space-bard-2/templates/actors/parts/actor-skills.html"}}
+            </div>
+            <div class="tab biography flexcol" data-group="primary" data-tab="biography">
+                {{roll-editor content=data.details.biography.value target="data.details.biography.value" button=true owner=owner editable=editable}}
+            </div>
+            <div class="tab misc flexcol" data-group="primary" data-tab="misc">
+                {{roll-editor content=data.details.misc.value target="data.details.misc.value" button=true owner=owner editable=editable}}
+            </div>
 
 
-                    </tr>
-                    {{/each}}
-                </tbody>
-
-            </table>
         </section>
     </section>
 </form>

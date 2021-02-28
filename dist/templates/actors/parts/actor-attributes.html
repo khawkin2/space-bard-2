@@ -1,0 +1,50 @@
+<section>
+    <table class="ability-table table">
+        <thead class="head">
+            <tr>
+                <th class="attribute-name-head">Ability</th>
+                <th>Total</th>
+                <th>Mod</th>
+                <th class="num-head">Raw</th>
+                <th class="num-head">Buff</th>
+                <th class="num-head">Dmg</th>
+            </tr>
+        </thead>
+
+        <tbody class="body">
+            {{#each data.combat_attributes as |attribute id|}}
+            <tr class="row">
+                <td>
+                    <a class="ability-name">{{id}}</a>
+                </td>
+
+                {{!-- Total --}}
+                <td class="num">
+                    <span name="data.combat_attributes.{{id}}.value" data-dtype="Number">{{attribute.value}}</span>
+                </td>
+
+                {{!-- Modifier --}}
+                <td class="num">{{numberFormat attribute.mod decimals=0 sign=true}}</td>
+
+                {{!-- Raw --}}
+                <td class="num">
+                    <input class="ability-score" name="data.combat_attributes.{{id}}.raw" type="text" value="{{attribute.raw}}" data-dtype="Number" placeholder="10" />
+                </td>
+
+                {{!-- Buff --}}
+                <td class="num">
+                    <input class="ability-score" name="data.combat_attributes.{{id}}.buffs" type="text" value="{{attribute.buffs}}" data-dtype="Number" placeholder="0" />
+                </td>
+
+                {{!-- Damage --}}
+                <td class="num">
+                    <input class="ability-score" name="data.combat_attributes.{{id}}.damage" type="text" value="{{attribute.damage}}" data-dtype="Number" placeholder="0" />
+                </td>
+
+
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+</section>

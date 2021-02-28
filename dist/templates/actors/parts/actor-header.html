@@ -1,0 +1,86 @@
+<section class="sheet-header flexcol">
+    <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" />
+
+    <section class="header-details flexcol">
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
+        </h1>
+
+        {{!-- Header Attributes --}}
+        <ul class="attributes flexcol">
+
+            <li class="attribute health">
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">HP</text>
+                    <div class="attribute-value multiple">
+                        <input name="data.core.hp.value" type="text" value="{{data.core.hp.value}}"
+                               data-dtype="Number" placeholder="10" />
+                        <span class="sep"> / </span>
+                        <input name="data.core.hp.max" type="text" value="{{data.core.hp.max}}"
+                               data-dtype="Number" placeholder="10" />
+                    </div>
+                </section>
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">Shield</text>
+                    <div class="attribute-value multiple">
+                        <input name="data.core.shield.value" type="text" value="{{data.core.shield.value}}"
+                               data-dtype="Number" placeholder="10" />
+                        <span class="sep"> / </span>
+                        <input name="data.core.shield.max" type="text" value="{{data.core.shield.max}}"
+                               data-dtype="Number" placeholder="10" />
+                    </div>
+                </section>
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">AC</text>
+                    <div class="attribute-value">
+                        <input name="data.core.ac.value" type="text" value="{{data.core.ac.value}}"
+                               data-dtype="Number" placeholder="10" />
+                    </div>
+                </section>
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">DR</text>
+                    <div class="attribute-value">
+                        <input name="data.core.dr.value" type="text" value="{{data.core.dr.value}}"
+                               data-dtype="Number" placeholder="0" />
+                    </div>
+                </section>
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">DR Type</text>
+                    <div class="attribute-value">
+                        <input name="data.core.dr.type" type="text" value="{{data.core.dr.type}}" placeholder="none" />
+                    </div>
+                </section>
+            </li>
+
+            <li class="attribute">
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">Resolve</text>
+                    <div class="attribute-value multiple">
+                        <input name="data.core.resolve.value" type="text" value="{{data.core.resolve.value}}"
+                               data-dtype="Number" placeholder="10" />
+                        <span class="sep"> / </span>
+                        <input name="data.core.resolve.max" type="text" value="{{data.core.resolve.max}}"
+                               data-dtype="Number" placeholder="10" />
+                    </div>
+                </section>
+            </li>
+            <li class="attribute">
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">Speed</text>
+                    <div class="attribute-value">
+                        <input name="data.core.speed.value" type="text"
+                               value="{{data.core.speed.value}}" placeholder="0" />
+                    </div>
+                </section>
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">Init</text>
+                    <div class="attribute-value">
+                        <input name="data.core.init.value" type="text"
+                               value="{{data.core.init.value}}" placeholder="0" />
+                    </div>
+                </section>
+            </li>
+
+        </ul>
+    </section>
+</section>

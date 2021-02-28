@@ -175,16 +175,9 @@ export default class ActorSB2 extends Actor {
 
         // Determine Initiative Modifier
         const init = data.core.init;
-        //const athlete = flags.remarkableAthlete;
-        //const joat = flags.jackOfAllTrades;
-        init.mod = data.combat_attributes.reflex.mod;
-        //if (joat) init.prof = Math.floor(0.5 * data.attributes.prof);
-        //else if (athlete) init.prof = Math.ceil(0.5 * data.attributes.prof);
-        //else init.prof = 0;
-        //init.bonus = init.value + (flags.initiativeAlert ? 5 : 0);
-        //init.total = init.mod + init.prof + init.bonus;
+        //init.mod = data.combat_attributes.reflex.mod;
 
-        init.total = init.mod + init.value;
+        //init.total = init.mod + init.value;
 
         // Prepare spell-casting data
         //data.attributes.spelldc = this.getSpellDC(data.attributes.spellcasting);

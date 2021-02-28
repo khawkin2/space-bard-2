@@ -14,6 +14,8 @@
 import { SB2 } from './module/config.js';
 import { registerSettings } from './module/settings.js';
 import { preloadTemplates } from './module/preloadTemplates.js';
+import { registerHandlebarsHelpers } from "./module/handlebars-helpers.js";
+import { _getInitiativeFormula } from "./module/combat.js";
 
 
 // Import Entities
@@ -75,7 +77,11 @@ Hooks.once('init', async function() {
 	registerSettings();
 	
 	// Preload Handlebars templates
-	await preloadTemplates();
+    await preloadTemplates();
+    registerHandlebarsHelpers();
+
+    CONFIG.Combat.initiative.formula = "1d20 + @data.core.init.value + @data.core.init.value/100";
+    Combat.prototype._getInitiativeFormula = _getInitiativeFormula;
 
 	// Register custom sheets (if any)
 	Actors.unregisterSheet("core", ActorSheet);

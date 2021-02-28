@@ -62,12 +62,16 @@
                     "speed": {
                         "value": 5
                     },
-                    "shields": {
+                    "shield": {
                         "value": 0,
                         "min": 0,
                         "max": 0
                     },
-                    "armour": {
+                    "dr": {
+                        "value": 0,
+                        "type": "phys"
+                    },
+                    "resolve": {
                         "value": 0,
                         "min": 0,
                         "max": 0
@@ -103,21 +107,25 @@
                     "etiquette": {
                         "attribute": "social",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "persuasion": {
                         "attribute": "social",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "intimidation": {
                         "attribute": "social",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "deception": {
                         "attribute": "social",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "intuition": {
@@ -129,100 +137,119 @@
                     "sneaking": {
                         "attribute": "stealth",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "disguising": {
                         "attribute": "stealth",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "thieving": {
                         "attribute": "stealth",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "lockpicking": {
                         "attribute": "stealth",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "strength": {
                         "attribute": "athletics",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "distance_running": {
                         "attribute": "athletics",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "swimming": {
                         "attribute": "athletics",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "acrobatics": {
                         "attribute": "athletics",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "climbing": {
                         "attribute": "athletics",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "survival": {
                         "attribute": "nature",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "tracking": {
                         "attribute": "nature",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "taming": {
                         "attribute": "nature",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "perception": {
                         "attribute": "nature",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "alchemy": {
                         "attribute": "arcane",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "enchanting": {
                         "attribute": "arcane",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "magic_knowledge": {
                         "attribute": "arcane",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "repair": {
                         "attribute": "science",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "computer": {
                         "attribute": "science",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     },
                     "medical": {
                         "attribute": "science",
                         "proficiency": false,
+                        "value": 0,
                         "bonus": 0
                     }
                 },
@@ -256,168 +283,200 @@
                     "pistols": {
                         "attribute": "small_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "automatic_pistols": {
                         "attribute": "small_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "weave_casters": {
                         "attribute": "small_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "hand_crossbows": {
                         "attribute": "small_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "rifles": {
                         "attribute": "long_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "machine_guns": {
                         "attribute": "long_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "shotguns": {
                         "attribute": "long_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "bows": {
                         "attribute": "long_arms",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "throwing_knives": {
                         "attribute": "throwing_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "throwing_stars": {
                         "attribute": "throwing_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "javelins": {
                         "attribute": "throwing_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "chakram": {
                         "attribute": "throwing_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "cannons": {
                         "attribute": "heavy_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "elemental_casters": {
                         "attribute": "heavy_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "mortars": {
                         "attribute": "heavy_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "railguns": {
                         "attribute": "heavy_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "swords": {
                         "attribute": "1h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "axes": {
                         "attribute": "1h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "maces": {
                         "attribute": "1h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "shields": {
                         "attribute": "1h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "greatswords": {
                         "attribute": "2h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "warhammers": {
                         "attribute": "2h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "polearms": {
                         "attribute": "2h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "staves": {
                         "attribute": "2h_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "daggers": {
                         "attribute": "small_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "garrotes": {
                         "attribute": "small_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "tasers": {
                         "attribute": "small_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "needles": {
                         "attribute": "small_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
 
                     "unarmed": {
                         "attribute": "fist_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "battle_gauntlets": {
                         "attribute": "fist_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "industro_gloves": {
                         "attribute": "fist_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     },
                     "weave_wraps": {
                         "attribute": "fist_weapons",
                         "proficiency": 0,
+                        "value": 0,
                         "bonus": 0
                     }
                 },
@@ -431,8 +490,9 @@
                         "value": "",
                         "public": ""
                     },
-                    "temp_notes": {
-                        "value": ""
+                    "misc": {
+                        "value": "",
+                        "public": ""
                     }
                 }
 
@@ -444,13 +504,174 @@
 
     },
 
+
     "Item": {
-        "types": [ "weapon" ],
+        "types": [ "weapon", "equipment", "consumable", "tool", "loot", "class", "spell", "skill-feat", "combat-feat", "ability" ],
         "templates": {
-            "description": ""
+            "itemDescription": {
+                "description": {
+                    "value": "",
+                    "chat": "",
+                    "unidentified": ""
+                },
+                "source": ""
+            },
+            "physicalItem": {
+                "quantity": 1,
+                "weight": 0,
+                "price": 0,
+                "attuned": false,
+                "attunement": 0,
+                "equipped": false,
+                "rarity": "",
+                "identified": true
+            },
+            "activatedEffect": {
+                "activation": {
+                    "type": "",
+                    "cost": 0,
+                    "condition": ""
+                },
+                "duration": {
+                    "value": null,
+                    "units": ""
+                },
+                "target": {
+                    "value": null,
+                    "width": null,
+                    "units": "",
+                    "type": ""
+                },
+                "range": {
+                    "value": null,
+                    "long": null,
+                    "units": ""
+                },
+                "uses": {
+                    "value": 0,
+                    "max": 0,
+                    "per": null
+                },
+                "consume": {
+                    "type": "",
+                    "target": null,
+                    "amount": null
+                }
+            },
+            "action": {
+                "ability": null,
+                "actionType": null,
+                "attackBonus": 0,
+                "chatFlavor": "",
+                "critical": null,
+                "damage": {
+                    "parts": [],
+                    "versatile": ""
+                },
+                "formula": "",
+                "save": {
+                    "ability": "",
+                    "dc": null,
+                    "scaling": "spell"
+                }
+            },
+            "mountable": {
+                "armor": {
+                    "value": 10
+                },
+                "hp": {
+                    "value": 0,
+                    "max": 0,
+                    "dt": null,
+                    "conditions": ""
+                }
+            }
+        },
+        "htmlFields": [ "description.value", "description.chat", "description.unidentified" ],
+        "class": {
+            "templates": [ "itemDescription" ],
+            "levels": 1,
+            "subclass": "",
+            "hitDice": "d6",
+            "spellcasting": "none"
+        },
+        "consumable": {
+            "templates": [ "itemDescription", "physicalItem", "activatedEffect", "action" ],
+            "consumableType": "potion",
+            "uses": {
+                "autoDestroy": false
+            }
+        },
+        "equipment": {
+            "templates": [ "itemDescription", "physicalItem", "activatedEffect", "action", "mountable" ],
+            "armor": {
+                "type": "light",
+                "value": 10,
+                "dex": null
+            },
+            "speed": {
+                "value": null,
+                "conditions": ""
+            },
+            "strength": 0
+        },
+        "skill-feat": {
+            "templates": [ "itemDescription", "activatedEffect", "action" ],
+            "requirements": "",
+            "recharge": {
+                "value": null,
+                "charged": false
+            }
+        },
+        "combat-feat": {
+            "templates": [ "itemDescription", "activatedEffect", "action" ],
+            "requirements": "",
+            "recharge": {
+                "value": null,
+                "charged": false
+            }
+        },
+        "loot": {
+            "templates": [ "itemDescription", "physicalItem" ]
+        },
+        "tool": {
+            "templates": [ "itemDescription", "physicalItem" ],
+            "ability": "int",
+            "chatFlavor": "",
+            "proficient": 0
+        },
+        "spell": {
+            "templates": [ "itemDescription", "activatedEffect", "action" ],
+            "level": 1,
+            "school": "",
+            "components": {
+                "value": "",
+                "vocal": false,
+                "somatic": false,
+                "material": false,
+                "ritual": false,
+                "concentration": false
+            },
+            "materials": {
+                "value": "",
+                "consumed": false,
+                "cost": 0,
+                "supply": 0
+            },
+            "preparation": {
+                "mode": "prepared",
+                "prepared": false
+            },
+            "scaling": {
+                "mode": "none",
+                "formula": null
+            }
         },
         "weapon": {
-            "templates": [ "description" ]
+            "templates": [ "itemDescription", "physicalItem", "activatedEffect", "action", "mountable" ],
+            "weaponType": "simpleM",
+            "properties": {},
+            "proficient": true
         }
     }
 }
