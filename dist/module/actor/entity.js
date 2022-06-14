@@ -32,10 +32,6 @@ export default class ActorSB2 extends Actor {
     prepareData() {
         super.prepareData();
 
-        console.log("_data");
-        console.log(this._data);
-        console.log("data");
-        console.log(this.data);
         const is07x = !isNewerVersion("0.7.1", game.data.version);
         for (var item in this._data) {
             console.log(item);
@@ -70,8 +66,12 @@ export default class ActorSB2 extends Actor {
 
         // Compute initial ability score modifiers in base data since these may be referenced
         for (let abl of Object.values(this.data.data.combat_attributes)) {
-            abl.value = abl.raw + abl.buffs + abl.damage;
+            abl.value = abl.raw + abl.buffs - abl.damage;
             abl.mod = Math.floor((abl.value - 10) / 2);
+        }
+
+        for (let sav of Object.values(this.data.data.saving_throws)) {
+            sav.value = this.data.data.combat_attributes[sav.stat].mod + sav.bonus + sav.level;
         }
 
         // Type-specific base data preparation

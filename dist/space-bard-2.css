@@ -406,7 +406,7 @@
             .space-bard-2.sheet .sheet-navigation .item {
                 height: 30px;
                 line-height: 32px;
-                margin: 0 24px;
+                margin: 0 4px;
                 border-bottom: 3px solid #b5b3a4;
                 font-size: 14px;
             }
@@ -532,6 +532,9 @@
         flex: 1;
         height: 60px;
         padding: 0;
+        border: none;
+        border-bottom: 2px groove #eeede0;
+        border-radius: 0;
     }
 
         .space-bard-2.sheet.actor .sheet-header h1.charname input {
@@ -545,11 +548,12 @@
     }
 
         .space-bard-2.sheet.actor .sheet-header .attributes .attribute {
-            height: 70px;
-            margin: 0;
+            height: fit-content;
+            margin: 10px 0;
             border: none;
             border-bottom: 2px groove #eeede0;
             border-radius: 0;
+            flex: 0;
         }
 
             .space-bard-2.sheet.actor .sheet-header .attributes .attribute:last-child {
@@ -566,6 +570,7 @@
                 line-height: 24px;
                 text-align: left;
                 white-space: nowrap;
+                margin-right: 8px;
                 flex: 1 3 0;
             }
 
@@ -630,7 +635,7 @@
 
                 .space-bard-2.sheet.actor ul.attributes li.attribute .attribute-value > * {
                     font-weight: 400;
-                    font-size: 16px;
+                    font-size: 14px;
                 }
 
                 .space-bard-2.sheet.actor ul.attributes li.attribute .attribute-value.multiple input {
@@ -1247,7 +1252,8 @@
     }
 
         .space-bard-2.sheet.item .sheet-navigation .item {
-            font-size: 14px;
+            font-size: 12px;
+            margin: 0 4px;
         }
 
     .space-bard-2.sheet.item .sheet-body {

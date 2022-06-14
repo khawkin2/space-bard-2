@@ -47,10 +47,41 @@
                         "buffs": 0
                     }
                 },
+                "saving_throws": {
+                    "authority": {
+                        "stat": "authority",
+                        "bonus": 0,
+                        "level": 0,
+                        "value": 0
+                    },
+                    "weave": {
+                        "stat": "weave",
+                        "bonus": 0,
+                        "level": 0,
+                        "value": 0
+                    },
+                    "constitution": {
+                        "stat": "constitution",
+                        "bonus": 0,
+                        "level": 0,
+                        "value": 0
+                    },
+                    "reflex": {
+                        "stat": "reflex",
+                        "bonus": 0,
+                        "level": 0,
+                        "value": 0
+                    }
+                },
 
                 "core": {
                     "ac": {
-                        "value": 10
+                        "value": 10,
+                        "raw_value": 10
+                    },
+                    "class": {
+                        "name": "Class",
+                        "level": 1
                     },
                     "hp": {
                         "value": 10,
@@ -481,6 +512,21 @@
                     }
                 },
                 "notes": {
+                    "value": ""
+                },
+                "spells_temp": {
+                    "value": ""
+                },
+                "inventory_temp": {
+                    "value": ""
+                },
+                "skills_temp": {
+                    "value": ""
+                },
+                "abilities_temp": {
+                    "value": ""
+                },
+                "feats_temp": {
                     "value": ""
                 }
             },

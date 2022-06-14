@@ -8,6 +8,22 @@
 
         {{!-- Header Attributes --}}
         <ul class="attributes flexcol">
+            <li class="attribute">
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">Class</text>
+                    <div class="attribute-value">
+                        <input name="data.core.class.name" type="text"
+                               value="{{data.core.class.name}}" placeholder="Class" />
+                    </div>
+                </section>
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">Level</text>
+                    <div class="attribute-value">
+                        <input name="data.core.class.level" type="text"
+                               value="{{data.core.class.level}}" placeholder="1" />
+                    </div>
+                </section>
+            </li>
 
             <li class="attribute health">
                 <section class="attribute-row flexrow">
@@ -34,6 +50,13 @@
                     <text class="attribute-name box-title">AC</text>
                     <div class="attribute-value">
                         <input name="data.core.ac.value" type="text" value="{{data.core.ac.value}}"
+                               data-dtype="Number" placeholder="10" />
+                    </div>
+                </section>
+                <section class="attribute-row flexrow">
+                    <text class="attribute-name box-title">Raw AC</text>
+                    <div class="attribute-value">
+                        <input name="data.core.ac.raw_value" type="text" value="{{data.core.ac.raw_value}}"
                                data-dtype="Number" placeholder="10" />
                     </div>
                 </section>

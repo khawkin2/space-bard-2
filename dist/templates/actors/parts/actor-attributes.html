@@ -47,4 +47,44 @@
         </tbody>
 
     </table>
+
+    <br />
+
+    <table class="ability-table table">
+        <thead class="head">
+            <tr>
+                <th class="attribute-name-head">Saving Throw</th>
+                <th>Total</th>
+                <th>Level-Up</th>
+                <th>Bonus</th>
+            </tr>
+        </thead>
+
+        <tbody class="body">
+            {{#each data.saving_throws as |sav id|}}
+            <tr class="row">
+                <td>
+                    <a class="ability-name">{{id}}</a>
+                </td>
+
+                {{!-- Total --}}
+                <td class="num">
+                    <span name="data.saving_throws.{{id}}.value" data-dtype="Number">{{sav.value}}</span>
+                </td>
+
+                {{!-- Level Up --}}
+                <td class="num">
+                    <input class="ability-score" name="data.saving_throws.{{id}}.level" type="text" value="{{sav.level}}" data-dtype="Number" placeholder="0" />
+                </td>
+
+                {{!-- Bonus --}}
+                <td class="num">
+                    <input class="ability-score" name="data.saving_throws.{{id}}.bonus" type="text" value="{{sav.bonus}}" data-dtype="Number" placeholder="0" />
+                </td>
+
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
 </section>

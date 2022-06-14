@@ -9,6 +9,10 @@
         <nav class="sheet-navigation tabs" data-group="primary">
             <a class="item active" data-tab="attributes">Attributes</a>
             <a class="item" data-tab="skills">Skills</a>
+            <a class="item" data-tab="abilities">Abilities</a>
+            <a class="item" data-tab="feats">Feats</a>
+            <a class="item" data-tab="spells">Spells</a>
+            <a class="item" data-tab="inventory">Inventory</a>
             <a class="item" data-tab="biography">Biography</a>
             <a class="item" data-tab="misc">Misc</a>
         </nav>
@@ -20,7 +24,19 @@
                 {{> "systems/space-bard-2/templates/actors/parts/actor-attributes.html"}}
             </div>
             <div class="tab skills flexcol" data-group="primary" data-tab="skills">
-                {{> "systems/space-bard-2/templates/actors/parts/actor-skills.html"}}
+                {{roll-editor content=data.skills_temp.value target="data.skills_temp.value" button=true owner=owner editable=editable}}
+            </div>
+            <div class="tab spells flexcol" data-group="primary" data-tab="abilities">
+                {{roll-editor content=data.abilities_temp.value target="data.abilities_temp.value" button=true owner=owner editable=editable}}
+            </div>
+            <div class="tab spells flexcol" data-group="primary" data-tab="feats">
+                {{roll-editor content=data.feats_temp.value target="data.feats_temp.value" button=true owner=owner editable=editable}}
+            </div>
+            <div class="tab spells flexcol" data-group="primary" data-tab="spells">
+                {{roll-editor content=data.spells_temp.value target="data.spells_temp.value" button=true owner=owner editable=editable}}
+            </div>
+            <div class="tab spells flexcol" data-group="primary" data-tab="inventory">
+                {{roll-editor content=data.inventory_temp.value target="data.inventory_temp.value" button=true owner=owner editable=editable}}
             </div>
             <div class="tab biography flexcol" data-group="primary" data-tab="biography">
                 {{roll-editor content=data.details.biography.value target="data.details.biography.value" button=true owner=owner editable=editable}}
