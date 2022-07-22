@@ -115,173 +115,266 @@
 
                 "skill_attributes": {
                     "social": {
-                        "value": 0
+                        "value": 0,
+                        "inner_skills": [
+                            "social_knowledge",
+                            "persuasion",
+                            "intimidation",
+                            "deception",
+                            "intuition"
+                        ]
                     },
                     "stealth": {
-                        "value": 0
+                        "value": 0,
+                        "inner_skills": [
+                            "sneaking",
+                            "disguising",
+                            "thieving",
+                            "lockpicking"
+                        ]
                     },
                     "athletics": {
-                        "value": 0
+                        "value": 0,
+                        "inner_skills": [
+                            "strength",
+                            "distance_running",
+                            "swimming",
+                            "acrobatics",
+                            "climbing"
+                        ]
                     },
                     "nature": {
-                        "value": 0
+                        "value": 0,
+                        "inner_skills": [
+                            "survival",
+                            "tracking",
+                            "taming",
+                            "perception",
+                            "wild_knowledge"
+                        ]
                     },
                     "arcane": {
-                        "value": 0
+                        "value": 0,
+                        "inner_skills": [
+                            "alchemy",
+                            "enchanting",
+                            "magic_knowledge",
+                            "elemental_knowledge",
+                            "occult_knowledge"
+                        ]
                     },
                     "science": {
-                        "value": 0
+                        "value": 0,
+                        "inner_skills": [
+                            "mechanical",
+                            "computers",
+                            "medical",
+                            "language"
+                        ]
                     }
                 },
 
                 "skills": {
-                    "etiquette": {
+                    "social_knowledge": {
                         "attribute": "social",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "persuasion": {
                         "attribute": "social",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "intimidation": {
                         "attribute": "social",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "deception": {
                         "attribute": "social",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "intuition": {
                         "attribute": "social",
                         "proficiency": false,
-                        "bonus": 0
+                        "value": 0,
+                        "bonus": 0,
+                        "total": 0
                     },
 
                     "sneaking": {
                         "attribute": "stealth",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "disguising": {
                         "attribute": "stealth",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "thieving": {
                         "attribute": "stealth",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "lockpicking": {
                         "attribute": "stealth",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
 
                     "strength": {
                         "attribute": "athletics",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "distance_running": {
                         "attribute": "athletics",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "swimming": {
                         "attribute": "athletics",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "acrobatics": {
                         "attribute": "athletics",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "climbing": {
                         "attribute": "athletics",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
 
                     "survival": {
                         "attribute": "nature",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "tracking": {
                         "attribute": "nature",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "taming": {
                         "attribute": "nature",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "perception": {
                         "attribute": "nature",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
+                    },
+                    "wild_knowledge": {
+                        "attribute": "nature",
+                        "proficiency": false,
+                        "value": 0,
+                        "bonus": 0,
+                        "total": 0
                     },
 
                     "alchemy": {
                         "attribute": "arcane",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "enchanting": {
                         "attribute": "arcane",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "magic_knowledge": {
                         "attribute": "arcane",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
+                    },
+                    "elemental_knowledge": {
+                        "attribute": "arcane",
+                        "proficiency": false,
+                        "value": 0,
+                        "bonus": 0,
+                        "total": 0
+                    },
+                    "occult_knowledge": {
+                        "attribute": "arcane",
+                        "proficiency": false,
+                        "value": 0,
+                        "bonus": 0,
+                        "total": 0
                     },
 
-                    "repair": {
+                    "mechanical": {
                         "attribute": "science",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
-                    "computer": {
+                    "computers": {
                         "attribute": "science",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
                     },
                     "medical": {
                         "attribute": "science",
                         "proficiency": false,
                         "value": 0,
-                        "bonus": 0
+                        "bonus": 0,
+                        "total": 0
+                    },
+                    "language": {
+                        "attribute": "science",
+                        "proficiency": false,
+                        "value": 0,
+                        "bonus": 0,
+                        "total": 0
                     }
                 },
                 "weapon_proficiency": {

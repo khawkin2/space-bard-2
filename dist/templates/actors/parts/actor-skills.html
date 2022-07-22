@@ -1,3 +1,59 @@
 <section>
+  <table class="skill-table table">
+      <thead class="head">
+        <tr>
+          <th class="attribute-name-head">Skill</th>
+          <th class="attribute-points">Points</th>
+          <th class="attribute-bonus">Bonus</th>
+          <th class="attribute-total">Total</th>
+        </tr>
+      </thead>
 
+      <tbody class="body">
+        {{#each data.skill_attributes as |cat_attribute cat_name|}}
+          {{log cat_name}}
+          <tr class="section-row">
+            <td><a class="skill-attribute">{{cat_name}}</a></td>
+            {{!-- Points --}}
+            <td class="num">
+                <input class="skill-score" name="data.skill_attributes.{{cat_name}}.value" type="text" value="{{cat_attribute.value}}" data-dtype="Number" placeholder="0" />
+            </td>
+
+            {{!-- Bonus --}}
+            <td class="num">
+                <span>N/A</span>
+            </td>
+
+            {{!-- Total --}}
+            <td class="num">
+              <span>N/A</span>
+            </td>
+          </tr>
+
+          {{log cat_attribute}}
+          {{#each cat_attribute.inner_skills as | id |}}
+          {{log id}}
+          {{log (lookup ../../data.skills id)}}
+          {{#with (lookup ../../data.skills id) as | skill |}}
+          <tr class="item-row">
+            <td><a class="skill-name">{{id}}</a></td>
+            {{!-- Points --}}
+            <td class="num">
+                <input class="skill-score" name="data.skills.{{id}}.value" type="text" value="{{skill.value}}" data-dtype="Number" placeholder="0" />
+            </td>
+
+            {{!-- Bonus --}}
+            <td class="num">
+                <input class="skill-score" name="data.skills.{{id}}.bonus" type="text" value="{{skill.bonus}}" data-dtype="Number" placeholder="0" />
+            </td>
+
+            {{!-- Total --}}
+            <td class="num">
+                <input class="skill-score" name="data.skills.{{id}}.total" type="text" value="{{skill.total}}" data-dtype="Number" placeholder="0" />
+            </td>
+          </tr>
+          {{/with}}
+          {{/each}}
+        {{/each}}
+    </tbody>
 </section>

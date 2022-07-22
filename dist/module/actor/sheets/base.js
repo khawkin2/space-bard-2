@@ -109,10 +109,8 @@ export default class ActorSheetSB2 extends ActorSheet {
 
             // Input focus and update
             const inputs = html.find("input");
-            console.log(inputs);
             inputs.focus(ev => ev.currentTarget.select());
             inputs.addBack().find('[data-dtype="Number"]').change(this._onChangeInputDelta.bind(this));
-            console.log(inputs.addBack().find('[data-dtype="Number"]'));
 
             // Ability Proficiency
             //html.find('.ability-proficiency').click(this._onToggleAbilityProficiency.bind(this));

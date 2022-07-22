@@ -9,6 +9,7 @@
         <nav class="sheet-navigation tabs" data-group="primary">
             <a class="item active" data-tab="attributes">Attributes</a>
             <a class="item" data-tab="skills">Skills</a>
+            <a class="item" data-tab="skills_old">Skills(Old)</a>
             <a class="item" data-tab="abilities">Abilities</a>
             <a class="item" data-tab="feats">Feats</a>
             <a class="item" data-tab="spells">Spells</a>
@@ -24,6 +25,9 @@
                 {{> "systems/space-bard-2/templates/actors/parts/actor-attributes.html"}}
             </div>
             <div class="tab skills flexcol" data-group="primary" data-tab="skills">
+                {{> "systems/space-bard-2/templates/actors/parts/actor-skills.html"}}
+            </div>
+            <div class="tab skills_old flexcol" data-group="primary" data-tab="skills_old">
                 {{roll-editor content=data.skills_temp.value target="data.skills_temp.value" button=true owner=owner editable=editable}}
             </div>
             <div class="tab spells flexcol" data-group="primary" data-tab="abilities">

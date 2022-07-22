@@ -54,4 +54,14 @@ export const registerHandlebarsHelpers = function () {
     if (button && editable) editor.append($('<a class="editor-edit"><i class="fas fa-edit"></i></a>'));
     return new Handlebars.SafeString(editor[0].outerHTML);
   });
+
+  Handlebars.registerHelper("strEquals", function(a, b, options) {
+    console.log(a + " == " + b + " " + a==b);
+    return (a==b) ? options.fn(this) : options.inverse(this);
+  });
+
+  console.log("LOGGERS???!?!?!");
+  Handlebars.registerHelper("log", function(message) { 
+    console.log(message);
+  });
 };

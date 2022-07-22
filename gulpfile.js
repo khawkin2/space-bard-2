@@ -495,6 +495,7 @@ exports.clean = clean;
 exports.link = linkUserData;
 exports.package = packageBuild;
 exports.update = updateManifest;
+//exports.install = localInstall;
 exports.publish = gulp.series(
 	clean,
 	updateManifest,
